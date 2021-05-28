@@ -1,0 +1,193 @@
+<html lang="en">
+
+<head>
+    <title>Results</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/chart.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
+        body {
+            font-family: 'Inter';
+            background-color: rgb(220, 220, 220);
+        }
+
+        #title {
+            background-color: white;
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 29px;
+            border-radius: 30px;
+            padding-bottom: 10px;
+        }
+
+        .cards {
+            background-color: white;
+            width: 40%;
+            border-radius: 30px;
+            padding-top: 40px;
+            padding-left: 40px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .div-graph {
+            margin-left: 25%;
+            margin-right: 25%;
+            width: 50%;
+            padding-top: 15px;
+            padding-bottom: 60px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        #graphs {
+            background-color: white;
+            border-radius: 30px;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title">
+        <h1 style="font-size: 80px; margin-top: -10px; text-align: center; margin-bottom: 0px;">Peanut Butter Results
+        </h1>
+    </div>
+    <br>
+    <p>
+    <div class="div-graph">
+        <h1>Do you like peanuts?</h1>
+        <canvas id="peanut-like-chart"></canvas>
+    </div>
+    </p>
+    <br>
+    <div class="div-graph">
+        <h1>Do you like peanut butter?</h1>
+        <canvas id="peanut-butter-like-chart"></canvas>
+    </div>
+    <div class="div-graph">
+        <h1>Do you prefer crunchy or smooth peanut butter?</h1>
+        <canvas id="crunchy-smooth-chart"></canvas>
+    </div>
+    <div class="div-graph">
+        <h1>What brand of peanut butter do you prefer?</h1>
+        <canvas id="brand-chart" style="margin-top: 70px;"></canvas>
+    </div>
+    <div class="div-graph">
+        <h1 style="margin-top: 10px;">What's your favorite way to eat peanut butter?</h1>
+        <canvas id="way-to-eat-chart"></canvas>
+    </div>
+    <div class="div-graph">
+        <h1>Do you like sweetened peanut butter? </h1>
+        <canvas id="sweetened-chart" style="margin-top: 75px;"></canvas>
+    </div>
+    <div class="div-graph">
+        <h1>Do you like added salt in peanut butter?</h1>
+        <canvas id="salt-chart"></canvas>
+    </div>
+    <script>
+        new Chart(document.getElementById("peanut-like-chart"), {
+            type: 'doughnut',
+            data: {
+                labels: ["Yes", "No", "Sorta"],
+                datasets: [{
+                    backgroundColor: ["#D8EAFF", "#FF6F59", "#174CA1"],
+                    data: PEANUT_REPLACE
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+        new Chart(document.getElementById("peanut-butter-like-chart"), {
+            type: 'doughnut',
+            data: {
+                labels: ["Yes", "No", "Sorta"],
+                datasets: [{
+                    backgroundColor: ["#D8EAFF", "#FF6F59", "#174CA1"],
+                    data: PEANUT_BUTTER_REPLACE
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+        new Chart(document.getElementById("crunchy-smooth-chart"), {
+            type: 'doughnut',
+            data: {
+                labels: ["Crunchy", "Smooth", "Don't Care"],
+                datasets: [{
+                    backgroundColor: ["#D8EAFF", "#FF6F59", "#174CA1"],
+                    data: CRUNCHY_SMOOTH_REPLACE
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+        new Chart(document.getElementById("brand-chart"), {
+            type: 'doughnut',
+            data: {
+                labels: ["Jif", "Skippy", "Justin's", "Store Brand", "Don't Care", "Other"],
+                datasets: [{
+                    backgroundColor: ["#D8EAFF", "#FF6F59", "#174CA1", "#32E875", "#FFB800", "#2A324B"],
+                    data: BRAND_REPLACE
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+        new Chart(document.getElementById("way-to-eat-chart"), {
+            type: 'doughnut',
+            data: {
+                labels: ["Spoon", "Bread", "PB&J", "Pretzels", "Apple", "Other"],
+                datasets: [{
+                    backgroundColor: ["#D8EAFF", "#FF6F59", "#174CA1", "#32E875", "#FFB800", "#2A324B"],
+                    data: WAY_TO_EAT_REPLACE
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+        new Chart(document.getElementById("sweetened-chart"), {
+            type: 'doughnut',
+            data: {
+                labels: ["Yes", "No", "Sorta", "Don't Care"],
+                datasets: [{
+                    backgroundColor: ["#D8EAFF", "#FF6F59", "#174CA1", "#32E875"],
+                    data: SWEETENED_REPLACE
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+        new Chart(document.getElementById("salt-chart"), {
+            type: 'doughnut',
+            data: {
+                labels: ["Yes", "No", "Sorta"],
+                datasets: [{
+                    backgroundColor: ["#D8EAFF", "#FF6F59", "#174CA1"],
+                    data: SALT_REPLACE
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+    </script>
+</body>
+
+</html>
