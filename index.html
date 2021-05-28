@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>The Peanut Butter Quiz</title>
+    <meta charset="utf-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+
+        body {
+            font-family: 'Inter';
+            background-color: rgb(214, 185, 233);
+        }
+
+        #title {
+            background-color: white;
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 29px;
+            border-radius: 30px;
+            padding-bottom: 10px;
+        }
+
+        .cards {
+            background-color: white;
+            width: 30%;
+            margin-left: 35%;
+            margin-right: 35%;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+            padding-top: 15px;
+            border-radius: 30px;
+            margin-bottom: 0px;
+        }
+
+        #submit:hover {
+            background-color: #cce9b9 !important;
+            border: solid 1px #cce9b9 !important;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="title">
+        <h1 style="font-size: 80px; margin-top: -10px; text-align: center; margin-bottom: 7px;">Peanut Butter</h1>
+        <h2 style="font-size: 35px; margin-top: -10px; text-align: center; margin-bottom: 3px; font-style: italic;">
+            It's just peanut
+            butter...</h2>
+    </div>
+    <br>
+    <div>
+        <form action="/results">
+
+            <div id="peanut_div" class="cards">
+
+                <h2 style="font-size: 40px; margin-top: 0px;">Do you like peanuts?<span style="color: #FF4136;">
+                        *</span>
+                </h2>
+
+
+                <input type="radio" id="yes_peanut" name="peanut_like" value="Yes" required>
+                <label for="yes_peanut">Yes</label><br>
+                <input type="radio" id="no_peanut" name="peanut_like" value="No" required>
+                <label for="no_peanut">No</label><br>
+                <input type="radio" id="sorta_peanut" name="peanut_like" value="Sorta" required>
+                <label for="sorta_peanut">Sorta</label>
+
+            </div>
+            <br>
+            <div id="peanut_butter_div" class="cards">
+
+                <h2 style="font-size: 40px; margin-top: 0px;">Do you like peanut butter?<span style="color: #FF4136;">
+                        *</span></h2>
+
+
+                <input type="radio" id="yes_peanut_butter" name="peanut_butter_like" value="Yes" required>
+                <label for="yes_peanut_butter">Yes</label><br>
+                <input type="radio" id="no_peanut_butter" name="peanut_butter_like" value="No" required>
+                <label for="no_peanut_butter">No</label><br>
+                <input type="radio" id="sorta_peanut_butter" name="peanut_butter_like" value="Sorta" required>
+                <label for="sorta_peanut_butter">Sorta</label>
+
+            </div>
+            <br>
+            <div id="crunchy_smooth_div" class="cards">
+
+                <h2 style="font-size: 40px; margin-top: 0px;">Do you prefer crunchy or smooth peanut butter?
+                </h2>
+
+
+                <input type="radio" id="crunchy" name="crunchy_smooth" value="Crunchy">
+                <label for="crunchy">Crunchy</label><br>
+                <input type="radio" id="smooth" name="crunchy_smooth" value="Smooth">
+                <label for="smooth">Smooth</label><br>
+                <input type="radio" id="dont_care" name="crunchy_smooth" value="Don't Care">
+                <label for="dont_care">Don't Care</label>
+
+            </div>
+            <br>
+            <div id="brand_div" class="cards">
+
+                <h2 style="font-size: 40px; margin-top: 0px;">What brand of peanut butter do you prefer?
+                </h2>
+
+
+                <input type="radio" id="jif" name="brand" value="Jif">
+                <label for="jif">Jif</label><br>
+                <input type="radio" id="skippy" name="brand" value="Skippy">
+                <label for="skippy">Skippy</label><br>
+                <input type="radio" id="justins" name="brand" value="Justin's">
+                <label for="justins">Justin's</label><br>
+                <input type="radio" id="store_brand" name="brand" value="Store Brand">
+                <label for="store_brand">Store Brand</label><br>
+                <input type="radio" id="dont_care_2" name="brand" value="Don't Care">
+                <label for="dont_care_2">Don't Care</label><br>
+                <input type="radio" id="other" name="brand" value="Other">
+                <label for="other">Other</label>
+
+            </div>
+            <br>
+            <div id="way_to_eat_div" class="cards">
+
+                <h2 style="font-size: 40px; margin-top: 0px;">What's your favorite way to eat peanut butter?
+                </h2>
+
+
+                <input type="radio" id="spoon" name="way_to_eat" value="Spoon">
+                <label for="spoon">Spoon</label><br>
+                <input type="radio" id="bread" name="way_to_eat" value="Bread">
+                <label for="bread">Bread</label><br>
+                <input type="radio" id="pbj" name="way_to_eat" value="PB&J">
+                <label for="pbj">PB&J</label><br>
+                <input type="radio" id="pretzels" name="way_to_eat" value="Pretzels">
+                <label for="pretzels">Pretzels</label><br>
+                <input type="radio" id="apple" name="way_to_eat" value="Apple">
+                <label for="apple">Apple</label><br>
+                <input type="radio" id="other_2" name="way_to_eat" value="Other">
+                <label for="other_2">Other</label>
+
+            </div>
+            <br>
+            <div id="sweetened_div" class="cards">
+
+                <h2 style="font-size: 40px; margin-top: 0px;">Do you like sweetened peanut butter?
+                </h2>
+
+
+                <input type="radio" id="yes_sweet" name="sweetened" value="Yes">
+                <label for="yes_sweet">Yes</label><br>
+                <input type="radio" id="no_sweet" name="sweetened" value="No">
+                <label for="no_sweet">No</label><br>
+                <input type="radio" id="sorta_sweet" name="sweetened" value="Sorta">
+                <label for="sorta_sweet">Sorta</label><br>
+                <input type="radio" id="dc_sweet" name="sweetened" value="Don't Care">
+                <label for="dc_sweet">Don't Care</label>
+
+            </div>
+            <br>
+            <div id="salt_div" class="cards">
+
+                <h2 style="font-size: 40px; margin-top: 0px;">Do you like added salt in peanut butter?
+                </h2>
+
+
+                <input type="radio" id="yes" name="salt" value="Yes">
+                <label for="yes">Yes</label><br>
+                <input type="radio" id="no" name="salt" value="No">
+                <label for="no">No</label><br>
+                <input type="radio" id="sorta" name="salt" value="Sorta">
+                <label for="sorta">Sorta</label>
+
+            </div>
+            <br>
+            <div id="general_thoughts_div" class="cards">
+                <h2 style="font-size: 40px; margin-top: 0px;">Any general thoughts on peanut
+                    butter?</h2>
+                <input type="text" id="general_thoughts" name="general_thoughts"
+                    style="width: 100%; width: 85%; height: 3vh; border-radius: 25px; outline-style: none; border-color: black; border-style: solid; padding-left: 10px;">
+            </div>
+            <br>
+            <input type="submit" id="submit"
+                style="margin-left: 35%; margin-right: 35%; width: 31.6%; height: 40px; background-color: white; border: solid 1px white; border-radius: 25px; font-family: 'Inter'; transition: all 0.3s;"
+                value="Submit!">
+        </form>
+    </div>
+</body>
